@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f5f7fb;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4A90E2, #6C63FF);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .faq {
+            background: #fff;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background: white;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s ease;
+            padding: 0 15px;
+            color: #555;
+        }
+
+        /* ACTIVE STATE */
+        .faq.active .faq-content {
+            max-height: 200px;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Help & Support</h1>
+        <p>FAQ answers here</p>
+    </div>
+
+    <div class="container">
+
+        <div class="faq">
+            <button onclick="toggleFAQ(this)">How to use website?</button>
+            <div class="faq-content">
+                Open homepage → select option → follow steps.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button onclick="toggleFAQ(this)">Is it free?</button>
+            <div class="faq-content">
+                Yes, it is completely free to use.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button onclick="toggleFAQ(this)">How to contact support?</button>
+            <div class="faq-content">
+                Use contact form or email support.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleFAQ(btn) {
+            let faq = btn.parentElement;
+
+            // close others optional
+            document.querySelectorAll(".faq").forEach(f => {
+                if (f !== faq) {
+                    f.classList.remove("active");
+                }
+            });
+
+            faq.classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Find Pather Edu Guide</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img src="images/logo.jpeg" alt="Logo">
+
+                <h2>Find Pather Edu Guide</h2>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="home.html">Home</a></li>
+
+                <li><a href="career/overview.html">Career Paths</a></li>
+
+                <li><a href="contact.html" class="active">Contact</a></li>
+
+                <li><a href="help.html">Help</a></li>
+
+                <li><a href="feedback.html">Feedback</a></li>
+
+                <li><a href="login.html" class="login-btn">Login</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="career-hero contact-hero">
+
+        <div class="career-hero-overlay"></div>
+
+        <div class="career-hero-content">
+
+            <h1>Contact Us</h1>
+
+            <p>We are here to help you choose your perfect career path</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT INFO ================= -->
+
+    <section class="contact-section">
+
+        <h2 class="section-title">Get in Touch</h2>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>Call Us</h3>
+
+                <p>+91 8074552870</p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h3>Email Us</h3>
+
+                <p>support@findpatheredu.com</p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <h3>Website</h3>
+
+                <p>www.findpatheredu.com</p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>Address</h3>
+
+                <p>Andhra Pradesh, India</p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= CONTACT FORM ================= -->
+
+    <section class="contact-form-section">
+
+        <h2 class="section-title">Send Us a Message</h2>
+
+        <form class="contact-form" onsubmit="return validateContact()">
+
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <input type="text" id="subject" placeholder="Subject" required>
+
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit" class="hero-btn">Send Message</button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= MAP SECTION ================= -->
+
+    <section class="map-section">
+
+        <h2 class="section-title">Our Location</h2>
+
+        <div class="map-box">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;"
+                allowfullscreen="" loading="lazy">
+
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>© 2026 Find Pather Edu Guide | All Rights Reserved</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JS ================= -->
+
+    <script>
+
+        function validateContact() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || message === "") {
+
+                alert("Please fill all fields");
+                return false;
+
+            }
+
+            alert("Message Sent Successfully!");
+            return true;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
